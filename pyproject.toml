@@ -1,0 +1,16 @@
+[project]
+name = "rag4code-ollama"
+version = "0.1.0"
+description = "Ollama embedder adapter for rag4code"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.24.0",
+]
+
+[project.entry-points."rag4code.embedder"]
+ollama = "rag4code_ollama.adapter:OllamaEmbedder"
+
+[build-system]
+requires = ["uv_build>=0.9.2,<0.10.0"]
+build-backend = "uv_build"
